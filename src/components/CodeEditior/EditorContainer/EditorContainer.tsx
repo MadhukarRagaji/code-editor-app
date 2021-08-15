@@ -1,8 +1,11 @@
 import { AppBar, makeStyles, Tab, Tabs } from '@material-ui/core';
 import React, { ChangeEvent } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../store/hook';
-import selectActiveFiles from '../../../store/selectors/selectActiveFiles/SelectActiveFiles';
 import { setEditorActiveFile } from '../../../store/reducers/files/reducer';
+import selectActiveFiles from '../../../store/selectors/selectActiveFiles/SelectActiveFiles';
+import CustomTabLabel from './CustomTabLabel';
+import CustomTabPanel from './CustomTabPanel';
+
 const EditorContainer = () => {
   const classes = useStyles();
   const dispatch = useAppDispatch();
